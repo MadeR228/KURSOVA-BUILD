@@ -17,7 +17,6 @@ import { AuthProvider } from './context/AuthContext';
 import { useAuth } from './context/AuthContext';
 import { VacancyProvider } from './context/VacancyContext';
 
-// Separate component for routes to use auth context
 const AppRoutes = () => {
   const { isAuthenticated, userRole, logout } = useAuth();
 
