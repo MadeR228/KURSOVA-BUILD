@@ -221,7 +221,7 @@ const JobListings = () => {
                     </svg>
                   </button>
                   <span className="pagination-info">
-                    Page {currentPage} of {totalPages}
+                    {currentPage} з {totalPages}
                   </span>
                   <button
                     className="pagination-arrow"
