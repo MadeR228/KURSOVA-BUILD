@@ -1,0 +1,271 @@
+.hero {
+  width: 100%;
+  background: linear-gradient(120deg, #1e40af, #3b82f6);
+  color: var(--white);
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--white);
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: var(--white);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 2px solid var(--white);
+  color: var(--white);
+}
+
+.btn-secondary:hover {
+  background-color: var(--white);
+  color: var(--primary-color);
+}
+
+
+
+.featured-jobs,
+.company-info {
+  padding: 4rem 0;
+}
+
+.featured-jobs {
+  background-color: var(--white);
+}
+
+.company-info {
+  background-color: var(--light-gray);
+}
+
+.jobs-grid,
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.job-card,
+.benefit-card {
+  background: var(--white);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.job-card h3,
+.benefit-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.job-card p {
+  margin-bottom: 0.5rem;
+}
+
+.job-card .btn {
+  margin-top: 1rem;
+}
+
+.benefit-card {
+  text-align: center;
+}
+
+.benefit-card p {
+  color: #666;
+}
+
+h2 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .jobs-grid,
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.featured-positions {
+  width: 100%;
+  padding: 2rem;
+  position: relative;
+}
+
+.featured-positions h2 {
+  margin-bottom: 2rem;
+  padding: 0 2rem;
+}
+
+.slider-container {
+  position: relative;
+  padding: 0 2rem;
+}
+
+.positions-slider {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  padding: 1rem 0;
+}
+
+.positions-slider::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.position-card {
+  min-width: 300px;
+  flex: 0 0 auto;
+  background: white;
+  border-radius: 1rem;
+  user-select: none;
+  padding: 1.5rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  transition: all 0.3s ease;
+}
+
+.position-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  border-color: #cbd5e1;
+}
+
+.position-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.position-info {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  color: var(--text-color-light);
+  font-size: 0.875rem;
+}
+
+.slider-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: white;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 10;
+  color: var(--primary-color);
+}
+
+.slider-button:hover {
+  background: var(--primary-color);
+  color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+  transform: translateY(-50%) scale(1.05);
+}
+
+.slider-button.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.slider-button.disabled:hover {
+  background: white;
+  color: inherit;
+  transform: translateY(-50%);
+}
+
+.slider-button.prev {
+  left: 1rem;
+}
+
+.slider-button.next {
+  right: 1rem;
+}
+
+.slider-button svg {
+  width: 28px;
+  height: 28px;
+  stroke-width: 3;
+}
+
+/* Стили для поддержки перетаскивания */
+.positions-slider.dragging {
+  scroll-behavior: auto;
+}
+
+.position-card .apply-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+}
+
+.position-card .apply-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .position-card {
+    min-width: 280px;
+  }
+
+  .slider-button {
+    width: 36px;
+    height: 36px;
+  }
+}
