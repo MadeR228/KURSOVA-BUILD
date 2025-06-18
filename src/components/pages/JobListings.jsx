@@ -199,7 +199,7 @@ const JobListings = () => {
 
                     <div className="job-actions">
                       <Link to={`/jobs/${job.id}/apply`} className="btn btn-primary">
-                        Apply Now
+                        Apply now
                       </Link>
                       <Link to={`/jobs/${job.id}`} className="btn btn-secondary">
                         Learn More
