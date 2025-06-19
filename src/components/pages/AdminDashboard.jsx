@@ -365,7 +365,7 @@ const AdminDashboard = () => {
               navigate('');
             }}
           >
-            Dashboard
+            Управління
           </button>
           <button
             className={`nav-item ${activeTab === 'employees' ? 'active' : ''}`}
@@ -374,7 +374,7 @@ const AdminDashboard = () => {
               navigate('employees');
             }}
           >
-            Employees
+            Працівники
           </button>
           <button
             className={`nav-item ${activeTab === 'applications' ? 'active' : ''}`}
@@ -383,7 +383,7 @@ const AdminDashboard = () => {
               navigate('applications');
             }}
           >
-            Applications
+            Заявки
           </button>
           <button
             className={`nav-item ${activeTab === 'reports' ? 'active' : ''}`}
@@ -392,7 +392,7 @@ const AdminDashboard = () => {
               navigate('reports');
             }}
           >
-            Reports
+            Звіти
           </button>
         </nav>
       </div>
