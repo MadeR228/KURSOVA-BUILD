@@ -570,12 +570,6 @@ const AdminDashboard = () => {
                           </a>
                         </p>
                       )}
-                      {app.coverLetter && (
-                        <div className="cover-letter">
-                          <strong>Cover Letter:</strong>
-                          <p>{app.coverLetter}</p>
-                        </div>
-                      )}
                     </div>
                     <div className="application-actions">
                       <div className="action-buttons">
