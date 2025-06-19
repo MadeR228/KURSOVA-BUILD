@@ -270,6 +270,16 @@ h2 {
   }
 }
 
+.container_slider {
+  margin: 0;
+  width: 100%;
+  padding: 2rem;
+  background: var(--white);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
 .partners-section {
   padding: 0 0 4rem;
   background: var(--light-gray);
