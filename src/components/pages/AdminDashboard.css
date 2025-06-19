@@ -31,6 +31,7 @@
   border-radius: 4px;
   color: var(--white);
   transition: all 0.3s ease;
+  font-weight: bold;
 }
 
 .admin-nav .nav-item:hover {
@@ -210,7 +211,7 @@ th {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  margin-left: 60px;
+  margin-right: 1rem;
 }
 
 .filter-select {
