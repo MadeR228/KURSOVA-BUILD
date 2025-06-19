@@ -203,6 +203,16 @@ th {
   border-color: var(--primary-color);
 }
 
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: linear-gradient(120deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-left: 60px;
+}
+
 .filter-select {
   min-width: 150px;
   padding: 0.75rem;
