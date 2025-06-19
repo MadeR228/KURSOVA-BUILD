@@ -194,7 +194,7 @@ const Apply = () => {
         </div>
 
         <div className="form-group">
-          <label htmlFor="coverLetter"><b>Супровідний лист</b></label>
+          <label htmlFor="coverLetter"><span className="uatext">Супровідний лист</span></label>
           <textarea
             id="coverLetter"
             name="coverLetter"

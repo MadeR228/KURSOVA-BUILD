@@ -270,3 +270,7 @@
   height: 20px;
   animation: fadeIn 0.3s ease 0.2s both;
 }
+
+.uatext {
+  font-weight: 500;
+}
