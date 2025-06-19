@@ -78,6 +78,10 @@ const Apply = () => {
     // Show toast notification
     setShowToast(true);
 
+    setTimeout(() => {
+      setIsHiding(true);
+    }, 500);
+
   };
 
   if (!job) {
