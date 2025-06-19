@@ -166,7 +166,7 @@ const Apply = () => {
                 <polyline points="17 8 12 3 7 8" />
                 <line x1="12" y1="3" x2="12" y2="15" />
               </svg>
-              <span className="file-upload-text">Choose a file</span>
+              <span className="file-upload-text">Виберіть файл</span>
             </label>
             <input
               type="file"
