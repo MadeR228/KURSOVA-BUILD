@@ -196,7 +196,7 @@ const Contact = () => {
           <div className="map-iframe-container">
             <iframe
               title="Полтава на карте"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d82335.88542754507!2d34.48366985738855!3d49.589732742884334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d825e425e6ba6b%3A0xcf3e6bdfb9e4ca82!2z0J_QvtC70YLQsNCy0LAsINCf0L7Qu9GC0LDQstGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCAzNjAwMA!5e0!3m2!1sru!2sua!4v1717960151996!5m2!1sru!2sua"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2561.3489474291575!2d34.55969891571607!3d49.57861797936492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d825dddcf44bbd%3A0x7ff2ccfddeae6036!2z0J_QvtC70YLQsNCy0LAg0J_RgNC40LLQtdGA0YHQuNC5LCAyNCwg0J_QvtC00YHQtdC70YzQvdCw0Y8sINCe0LrQu9C40L3RgdGM0LrQsCDQvtCx0LvQsNGB0YLRjCwgMzYwMDA!5e0!3m2!1suk!2sua!4v1718790582719!5m2!1suk!2sua"
               width="100%"
               height="500"
               style={{ border: 0, borderRadius: 10}}
