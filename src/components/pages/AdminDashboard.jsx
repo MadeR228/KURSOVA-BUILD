@@ -540,11 +540,11 @@ const AdminDashboard = () => {
                   value={statusFilter}
                   onChange={(e) => setStatusFilter(e.target.value)}
                 >
-                  <option value="">All Statuses</option>
-                  <option value="pending">Pending</option>
-                  <option value="interview">Interview</option>
-                  <option value="accepted">Accepted</option>
-                  <option value="rejected">Rejected</option>
+                  <option value="">Всі статуси</option>
+                  <option value="pending">Очікує</option>
+                  <option value="interview">Інтерв'ю</option>
+                  <option value="accepted">Прийнято</option>
+                  <option value="rejected">Відхилено</option>
                 </select>
               </div>
 
