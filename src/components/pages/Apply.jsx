@@ -60,7 +60,7 @@ const Apply = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     // Create application object
     const application = {
       name: `${formData.firstName} ${formData.lastName}`,
@@ -74,18 +74,10 @@ const Apply = () => {
 
     // Add application to context
     addApplication(application);
-    
+
     // Show toast notification
     setShowToast(true);
-    
-    // Start hide animation after 4.5 seconds
-    setTimeout(() => {
-      setIsHiding(true);
-      // Navigate after animation completes
-      setTimeout(() => {
-        navigate('/jobs');
-      }, 500);
-    }, 4500);
+
   };
 
   if (!job) {
@@ -111,7 +103,7 @@ const Apply = () => {
           Application submitted successfully!
         </div>
       )}
-      
+
       <div className="apply-header">
         <h1>Apply for {job.title}</h1>
         <p>{job.department} • {job.location}</p>
@@ -119,7 +111,7 @@ const Apply = () => {
 
       <form className="application-form" onSubmit={handleSubmit}>
         <div className="form-group">
-          <label htmlFor="firstName">First Name *</label>
+          <label htmlFor="firstName">Ім'я *</label>
           <input
             type="text"
             id="firstName"
@@ -131,7 +123,7 @@ const Apply = () => {
         </div>
 
         <div className="form-group">
-          <label htmlFor="lastName">Last Name *</label>
+          <label htmlFor="lastName">Прізвище *</label>
           <input
             type="text"
             id="lastName"
@@ -155,7 +147,7 @@ const Apply = () => {
         </div>
 
         <div className="form-group">
-          <label htmlFor="phone">Phone Number</label>
+          <label htmlFor="phone">Телефон</label>
           <input
             type="tel"
             id="phone"
@@ -166,7 +158,7 @@ const Apply = () => {
         </div>
 
         <div className="form-group">
-          <label htmlFor="resume">Resume/CV *</label>
+          <label htmlFor="resume">Резюме/CV *</label>
           <div className="custom-file-upload">
             <label htmlFor="resume" className="file-upload-button">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -198,23 +190,23 @@ const Apply = () => {
               </button>
             </div>
           </div>
-          <small>Accepted formats: PDF, DOC, DOCX</small>
+          <small>Формати: PDF, DOC, DOCX</small>
         </div>
 
         <div className="form-group">
-          <label htmlFor="coverLetter">Cover Letter</label>
+          <label htmlFor="coverLetter">Супровідний лист</label>
           <textarea
             id="coverLetter"
             name="coverLetter"
             value={formData.coverLetter}
             onChange={handleInputChange}
             rows="6"
-            placeholder="Tell us why you're interested in this position..."
+            placeholder="Напишіть, чому вас зацікавила ця посада..."
           />
         </div>
 
         <div className="form-group">
-          <label htmlFor="linkedin">LinkedIn Profile (optional)</label>
+          <label htmlFor="linkedin">Профіль LinkedIn(необов’язково)</label>
           <input
             type="url"
             id="linkedin"
@@ -223,15 +215,15 @@ const Apply = () => {
             onChange={handleInputChange}
             placeholder="https://linkedin.com/in/your-profile"
           />
-          <small>Add your LinkedIn profile URL if you'd like us to review your professional experience</small>
+          <small>Додайте посилання на ваш профіль LinkedIn, якщо хочете, щоб ми ознайомилися з вашим професійним досвідом.</small>
         </div>
 
         <div className="form-actions">
           <button type="button" className="btn btn-secondary" onClick={() => navigate('/jobs')}>
-            Cancel
+            Назад
           </button>
           <button type="submit" className="btn btn-primary">
-            Submit Application
+            Відправити заявку
           </button>
         </div>
       </form>
@@ -239,4 +231,4 @@ const Apply = () => {
   );
 };
 
-export default Apply; 
+export default Apply;
