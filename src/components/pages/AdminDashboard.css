@@ -468,6 +468,10 @@ th {
     flex-direction: column;
   }
 
+  .applications-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .admin-sidebar {
     width: 100%;
   }
@@ -489,6 +493,7 @@ th {
   .applications-filters {
     flex-direction: column;
   }
+
 
   .table-actions {
     flex-direction: column;
