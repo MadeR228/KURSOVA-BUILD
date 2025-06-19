@@ -269,3 +269,98 @@ h2 {
     height: 36px;
   }
 }
+
+.partners-section {
+  padding: 0 0 4rem;
+  background: var(--light-gray);
+  overflow: hidden;
+}
+
+.partners-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.partners-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.partners-slider {
+  position: relative;
+  width: 75%;
+  margin: auto;
+  overflow: hidden;
+  padding: 10px 0;
+  background: linear-gradient(90deg,
+  rgba(255,255,255,1) 0%,
+  rgba(255,255,255,0) 2%,
+  rgba(255,255,255,0) 98%,
+  rgba(255,255,255,1) 100%
+  );
+}
+
+.partners-track {
+  display: flex;
+  animation: scroll 40s linear infinite;
+  width: calc(150px * 16); /* 8 logos * 2 for duplicate set */
+}
+
+.partner-logo {
+  flex: 0 0 150px;
+  height: 80px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.partner-logo img {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.partner-logo:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-150px * 8)); /* Move by the width of one set of logos */
+  }
+}
+
+/* Добавим паузу при наведении */
+.partners-track:hover {
+  animation-play-state: paused;
+}
+
+/* Медиа-запрос для мобильных устройств */
+@media (max-width: 768px) {
+  .partner-logo {
+    flex: 0 0 120px;
+    height: 60px;
+  }
+
+  .partners-track {
+    width: calc(120px * 16);
+  }
+
+  @keyframes scroll {
+    100% {
+      transform: translateX(calc(-120px * 8));
+    }
+  }
+}

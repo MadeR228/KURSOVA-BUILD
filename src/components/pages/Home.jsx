@@ -1,6 +1,9 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css';
+import {CompanyLogos} from "../additional/CompanyLogos";
+import {CompanyLogos2} from "../additional/CompanyLogos";
+import {CompanyLogos3} from "../additional/CompanyLogos";
 import { jobsData } from '../../data/jobsData';
 
 const Home = () => {
@@ -163,6 +166,36 @@ const Home = () => {
             <div className="benefit-card">
               <h3>Інклюзивна культура</h3>
               <p>Різноманітне та привітне робоче середовище</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="partners-section">
+        <div className="container_slider">
+          <h2>Наші партнери</h2>
+          <div className="partners-container">
+            <div className="partners-slider">
+              <div className="partners-track">
+                {CompanyLogos.map((src, i) => (
+                    <div className="partner-logo" key={16}>
+                      <img src={src} alt={`Logo ${i}`} />
+                    </div>
+                ))}
+              </div>
+              <div className="partners-track">
+                {CompanyLogos2.map((src, i) => (
+                    <div className="partner-logo" key={16}>
+                      <img src={src} alt={`Logo ${i}`} />
+                    </div>
+                ))}
+              </div>
+              <div className="partners-track">
+                {CompanyLogos3.map((src, i) => (
+                    <div className="partner-logo" key={16}>
+                      <img src={src} alt={`Logo ${i}`} />
+                    </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
