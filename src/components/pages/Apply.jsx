@@ -80,7 +80,7 @@ const Apply = () => {
 
     setTimeout(() => {
       setIsHiding(true);
-    }, 500);
+    }, 4500);
 
   };
 
