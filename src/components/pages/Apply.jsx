@@ -83,16 +83,16 @@ const Apply = () => {
       setIsHiding(true);
       // Navigate after animation completes
       setTimeout(() => {
-        navigate('/apply');
-      }, 500);
-    }, 4500);
+        window.location.reload();
+      }, 300);
+    }, 3500);
   };
 
   if (!job) {
     return (
       <div className="apply-page not-found">
-        <h1>Job Not Found</h1>
-        <p>The job posting you're looking for doesn't exist.</p>
+        <h1>Вакансії не існує</h1>
+        <p>Вакансія, яку ви шукаєте, не існує або недоступна.</p>
         <button onClick={() => navigate('/jobs')} className="btn btn-primary">
           Back to Jobs
         </button>
