@@ -94,7 +94,7 @@ const Apply = () => {
         <h1>Вакансії не існує</h1>
         <p>Вакансія, яку ви шукаєте, не існує або недоступна.</p>
         <button onClick={() => navigate('/jobs')} className="btn btn-primary">
-          Back to Jobs
+          Повернутися
         </button>
       </div>
     );
