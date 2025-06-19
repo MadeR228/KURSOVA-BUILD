@@ -15,7 +15,6 @@ import Apply from './components/pages/Apply';
 import { ApplicationProvider } from './context/ApplicationContext';
 import { AuthProvider } from './context/AuthContext';
 import { useAuth } from './context/AuthContext';
-import { VacancyProvider } from './context/VacancyContext';
 
 const AppRoutes = () => {
   const { isAuthenticated, userRole, logout } = useAuth();
@@ -59,13 +58,11 @@ const AppRoutes = () => {
 function App() {
   return (
     <Router>
-      <VacancyProvider>
         <AuthProvider>
           <ApplicationProvider>
             <AppRoutes />
           </ApplicationProvider>
         </AuthProvider>
-      </VacancyProvider>
     </Router>
   );
 }
