@@ -561,7 +561,6 @@ const AdminDashboard = () => {
                       <p><strong>Position:</strong> {app.position}</p>
                       <p><strong>Applied:</strong> {new Date(app.date).toLocaleDateString()}</p>
                       <p><strong>Email:</strong> {app.email}</p>
-                      {app.phone && <p><strong>Phone:</strong> {app.phone}</p>}
                       {app.linkedin && (
                         <p>
                           <strong>LinkedIn:</strong>
