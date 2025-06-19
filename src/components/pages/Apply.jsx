@@ -78,10 +78,14 @@ const Apply = () => {
     // Show toast notification
     setShowToast(true);
 
+    // Start hide animation after 4.5 seconds
     setTimeout(() => {
       setIsHiding(true);
+      // Navigate after animation completes
+      setTimeout(() => {
+        navigate('/apply');
+      }, 500);
     }, 4500);
-
   };
 
   if (!job) {
