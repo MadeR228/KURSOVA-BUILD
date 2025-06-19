@@ -221,7 +221,7 @@ th {
 
 .applications-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.5rem;
 }
 
@@ -466,10 +466,6 @@ th {
 @media (max-width: 768px) {
   .admin-dashboard {
     flex-direction: column;
-  }
-
-  .applications-grid {
-    grid-template-columns: repeat(2, 1fr);
   }
 
   .admin-sidebar {
