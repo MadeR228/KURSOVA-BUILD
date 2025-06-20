@@ -276,83 +276,108 @@ const AdminDashboard = () => {
               setSelectedEmployee(null);
           }}>×</button>
         </div>
-        <form onSubmit={modalType === 'add' ? handleAddEmployee : handleEditEmployee}>
-          <div className="form-group">
-            <label>Name</label>
-            <input
-              type="text"
-              required
-              value={modalType === 'add' ? newEmployee.name : selectedEmployee?.name}
-              onChange={(e) => modalType === 'add'
-                ? setNewEmployee({ ...newEmployee, name: e.target.value })
-                : setSelectedEmployee({ ...selectedEmployee, name: e.target.value })
-              }
-            />
-          </div>
-          <div className="form-group">
-            <label>Email</label>
-            <input
-              type="email"
-              required
-              value={modalType === 'add' ? newEmployee.email : selectedEmployee?.email}
-              onChange={(e) => modalType === 'add'
-                ? setNewEmployee({ ...newEmployee, email: e.target.value })
-                : setSelectedEmployee({ ...selectedEmployee, email: e.target.value })
-              }
-            />
-          </div>
-          <div className="form-group">
-            <label>Position</label>
-            <input
-              type="text"
-              required
-              value={modalType === 'add' ? newEmployee.position : selectedEmployee?.position}
-              onChange={(e) => modalType === 'add'
-                ? setNewEmployee({ ...newEmployee, position: e.target.value })
-                : setSelectedEmployee({ ...selectedEmployee, position: e.target.value })
-              }
-            />
-          </div>
-          <div className="form-group">
-            <label>Department</label>
-            <select
-              required
-              value={modalType === 'add' ? newEmployee.department : selectedEmployee?.department}
-              onChange={(e) => modalType === 'add'
-                ? setNewEmployee({ ...newEmployee, department: e.target.value })
-                : setSelectedEmployee({ ...selectedEmployee, department: e.target.value })
-              }
-            >
-              <option value="">Select Department</option>
-              {departments.map(dept => (
-                <option key={dept} value={dept}>{dept}</option>
-              ))}
-            </select>
-          </div>
-          <div className="form-group">
-            <label>Status</label>
-            <select
-              value={modalType === 'add' ? newEmployee.status : selectedEmployee?.status}
-              onChange={(e) => modalType === 'add'
-                ? setNewEmployee({ ...newEmployee, status: e.target.value })
-                : setSelectedEmployee({ ...selectedEmployee, status: e.target.value })
-              }
-            >
-              <option value="active">Active</option>
-              <option value="inactive">Inactive</option>
-              <option value="onleave">On Leave</option>
-            </select>
-          </div>
-          <div className="modal-actions">
-            <button type="button" className="btn btn-secondary" onClick={() => setShowModal(false)}>
-              Cancel
-            </button>
-            <button type="submit" className="btn btn-primary">
-              {modalType === 'add' ? 'Add Employee' : 'Save Changes'}
-            </button>
-          </div>
-        </form>
-      </div>
+          <form onSubmit={modalType === 'add' ? handleAddEmployee : handleEditEmployee}>
+            <div className="form-group">
+              <label>Name</label>
+              <input
+                  type="text"
+                  required
+                  value={(modalType === 'add' ? newEmployee.name : selectedEmployee?.name) ?? ''}
+                  onChange={(e) => {
+                    const value = e.target.value;
+                    if (modalType === 'add') {
+                      setNewEmployee({ ...newEmployee, name: value });
+                    } else if (selectedEmployee) {
+                      setSelectedEmployee({ ...selectedEmployee, name: value });
+                    }
+                  }}
+              />
+            </div>
+
+            <div className="form-group">
+              <label>Email</label>
+              <input
+                  type="email"
+                  required
+                  value={(modalType === 'add' ? newEmployee.email : selectedEmployee?.email) ?? ''}
+                  onChange={(e) => {
+                    const value = e.target.value;
+                    if (modalType === 'add') {
+                      setNewEmployee({ ...newEmployee, email: value });
+                    } else if (selectedEmployee) {
+                      setSelectedEmployee({ ...selectedEmployee, email: value });
+                    }
+                  }}
+              />
+            </div>
+
+            <div className="form-group">
+              <label>Position</label>
+              <input
+                  type="text"
+                  required
+                  value={(modalType === 'add' ? newEmployee.position : selectedEmployee?.position) ?? ''}
+                  onChange={(e) => {
+                    const value = e.target.value;
+                    if (modalType === 'add') {
+                      setNewEmployee({ ...newEmployee, position: value });
+                    } else if (selectedEmployee) {
+                      setSelectedEmployee({ ...selectedEmployee, position: value });
+                    }
+                  }}
+              />
+            </div>
+
+            <div className="form-group">
+              <label>Department</label>
+              <select
+                  required
+                  value={(modalType === 'add' ? newEmployee.department : selectedEmployee?.department) ?? ''}
+                  onChange={(e) => {
+                    const value = e.target.value;
+                    if (modalType === 'add') {
+                      setNewEmployee({ ...newEmployee, department: value });
+                    } else if (selectedEmployee) {
+                      setSelectedEmployee({ ...selectedEmployee, department: value });
+                    }
+                  }}
+              >
+                <option value="">Select Department</option>
+                {departments.map(dept => (
+                    <option key={dept} value={dept}>{dept}</option>
+                ))}
+              </select>
+            </div>
+
+            <div className="form-group">
+              <label>Status</label>
+              <select
+                  value={(modalType === 'add' ? newEmployee.status : selectedEmployee?.status) ?? 'active'}
+                  onChange={(e) => {
+                    const value = e.target.value;
+                    if (modalType === 'add') {
+                      setNewEmployee({ ...newEmployee, status: value });
+                    } else if (selectedEmployee) {
+                      setSelectedEmployee({ ...selectedEmployee, status: value });
+                    }
+                  }}
+              >
+                <option value="active">Active</option>
+                <option value="inactive">Inactive</option>
+                <option value="onleave">On Leave</option>
+              </select>
+            </div>
+
+            <div className="modal-actions">
+              <button type="button" className="btn btn-secondary" onClick={() => setShowModal(false)}>
+                Cancel
+              </button>
+              <button type="submit" className="btn btn-primary">
+                {modalType === 'add' ? 'Add Employee' : 'Save Changes'}
+              </button>
+            </div>
+          </form>
+        </div>
     </div>
   );
   };
