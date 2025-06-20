@@ -88,7 +88,7 @@ const EmployeePortal = () => {
               navigate('documents');
             }}
           >
-            Документи
+            <b>Документи</b>
           </button>
           <button
             className={`nav-item ${activeTab === 'training' ? 'active' : ''}`}
