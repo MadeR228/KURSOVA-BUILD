@@ -70,7 +70,7 @@ const EmployeePortal = () => {
               navigate('');
             }}
           >
-            Dashboard
+            <b>Деталі</b>
           </button>
           <button
             className={`nav-item ${activeTab === 'leave' ? 'active' : ''}`}
@@ -79,7 +79,7 @@ const EmployeePortal = () => {
               navigate('leave');
             }}
           >
-            Leave Management
+            <b>Управління відпустками</b>
           </button>
           <button
             className={`nav-item ${activeTab === 'documents' ? 'active' : ''}`}
@@ -97,7 +97,7 @@ const EmployeePortal = () => {
               navigate('training');
             }}
           >
-            Training
+            <b>Навчання</b>
           </button>
         </nav>
       </div>
