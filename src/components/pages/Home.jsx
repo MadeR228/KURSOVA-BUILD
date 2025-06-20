@@ -1,9 +1,9 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css';
-import {CompanyLogos} from "../additional/CompanyLogos";
-import {CompanyLogos2} from "../additional/CompanyLogos";
-import {CompanyLogos3} from "../additional/CompanyLogos";
+import {CompanyLogos} from "../../data/CompanyLogos";
+import {CompanyLogos2} from "../../data/CompanyLogos";
+import {CompanyLogos3} from "../../data/CompanyLogos";
 import { jobsData } from '../../data/jobsData';
 
 const Home = () => {
