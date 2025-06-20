@@ -197,7 +197,7 @@ const EmployeePortal = () => {
 
           <Route path="documents" element={
             <div className="documents">
-              <h2>Documents</h2>
+              <h2>Документи</h2>
 
               <div className="documents-grid">
                 {documents.map(doc => (
